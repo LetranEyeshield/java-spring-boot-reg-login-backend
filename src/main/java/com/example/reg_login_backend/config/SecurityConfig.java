@@ -57,7 +57,8 @@ public class SecurityConfig {
             .csrf(csrf -> csrf.disable())
             .cors(cors -> cors.configurationSource(request -> {
                 CorsConfiguration config = new CorsConfiguration();
-                config.setAllowedOrigins(Arrays.asList("http://localhost:5173")); // your frontend
+                //config.setAllowedOrigins(Arrays.asList("http://localhost:5173")); // your frontend
+                config.setAllowedOrigins(Arrays.asList("https://java-spring-boot-reg-login-frontend.vercel.app/")); // your frontend
                 config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
                 config.setAllowedHeaders(Arrays.asList("*"));
                 config.setAllowCredentials(true);
